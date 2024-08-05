@@ -1,0 +1,12 @@
+{
+  "server": {
+    "port": 8080
+  },
+  "bancoDados": {
+    "host": "",
+    "database": ""
+  },
+  "security": {
+    "private_key": ""
+  }
+}
