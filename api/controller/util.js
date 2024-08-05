@@ -7,9 +7,9 @@ module.exports = () => {
   controller.getCollection = async (collection_name) => {
     var MongoClient = require("mongodb").MongoClient;
     //1º Acessar o Servidor
-    let con = await MongoClient.connect(config.get("bancoDados.host"));
+    let con = await MongoClient.connect(process.env.DB_HOST);
     //2º Acessar o Banco de Dados
-    let db = await con.db(config.get("bancoDados.database"));
+    let db = await con.db(process.env.DB_DATABASE);
     //3º Acessar a Coleção
     let collection = await db.collection(collection_name);
     return collection;

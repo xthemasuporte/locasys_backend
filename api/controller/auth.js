@@ -15,7 +15,7 @@ module.exports = () => {
 
       let token = jsonwebtoken.sign(
         { usuario: usuario.usuario, nome: usuario.nome },
-        config.get("security.private_key"),
+        process.env.PRIVATE_KEY,
         { expiresIn: "60m" }
       );
 
